@@ -10,5 +10,11 @@ class Product(models.Model) :
     #유통기한
     day_cnt = models.DateTimeField()
     #제조사
-    manufacturer = models.CharField()
+    manufacturer = models.CharField(max_length=50)
+    #설명
+    description = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
+
 # Create your models here.
